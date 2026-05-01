@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Appointment | DAKTAR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="top-header">
+  <div class="logo">DAKTAR</div>
+  <button class="login-btn" onclick="goHome()">Home</button>
+</header>
+
+<!-- Title -->
+<section class="hero">
+  <h1>Book Your Appointment 📅</h1>
+  <p>Choose doctor, enter details, and confirm your consultation</p>
+</section>
+
+<!-- Appointment Form -->
+<section>
+  <div class="auth-container">
+
+    <form id="appointmentForm">
+
+      <label>Select Doctor</label>
+<select id="doctorName" required>
+  <option value="">-- Choose Doctor --</option>
+  <option value="Dr. Aisha Khan (General Physician)">Dr. Aisha Khan - General Physician</option>
+  <option value="Dr. Rohan Mehta (Cardiologist)">Dr. Rohan Mehta - Cardiologist</option>
+  <option value="Dr. Neha Sharma (Dermatologist)">Dr. Neha Sharma - Dermatologist</option>
+  <option value="Dr. Arjun Verma (Orthopedic)">Dr. Arjun Verma - Orthopedic</option>
+</select>
+
+      <label>Your Name</label>
+      <input type="text" id="yourName" placeholder="Enter your name" required>
+
+      <label>Date</label>
+      <input type="date" id="date" required>
+
+      <button type="submit">Book Appointment</button>
+
+    </form>
+
+    <p id="confirmMsg"></p>
+
+    <!-- Back Link -->
+    <p style="margin-top:15px;">
+      <a href="user.html" style="color:#ff4d88; font-weight:bold;">
+        ← Back to Dashboard
+      </a>
+    </p>
+
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

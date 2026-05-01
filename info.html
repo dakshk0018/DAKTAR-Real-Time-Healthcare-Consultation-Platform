@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Medical Profile | DAKTAR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="top-header">
+  <div class="logo">DAKTAR</div>
+  <button class="login-btn" onclick="goHome()">Home</button>
+</header>
+
+<!-- Title -->
+<section class="hero">
+  <h1>Medical Profile Form 🩺</h1>
+  <p>Fill your health details for better consultation and diagnosis</p>
+</section>
+
+<!-- Form -->
+<section>
+  <div class="auth-container">
+
+    <form id="medicalForm">
+
+      <h3>👤 Personal Information</h3>
+
+      <input type="text" placeholder="Full Name" id="name" required>
+      <input type="number" placeholder="Age" id="age" required>
+
+      <select id="gender" required>
+        <option value="">Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+      <input type="text" placeholder="Blood Group (e.g. B+)" id="bloodGroup">
+
+      <h3>🧬 Medical Information</h3>
+
+      <input type="text" placeholder="Existing Diseases (if any)" id="diseases">
+      <input type="text" placeholder="Allergies (food/medicine)" id="allergies">
+      <input type="text" placeholder="Current Medications" id="medications">
+
+      <h3>📊 Health Metrics</h3>
+
+      <input type="number" placeholder="Height (cm)" id="height">
+      <input type="number" placeholder="Weight (kg)" id="weight">
+      <input type="text" placeholder="Blood Pressure (e.g. 120/80)" id="bp">
+
+      <h3>📞 Contact Info</h3>
+
+      <input type="text" placeholder="Phone Number" id="phone" required>
+      <input type="email" placeholder="Email" id="email">
+
+      <button type="submit">Save Medical Record</button>
+
+    </form>
+
+    <p id="msg"></p>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 DAKTAR | Medical Record System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

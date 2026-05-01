@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard - Healthcare System</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background: #f4f6f8;
+    }
+
+    header {
+      background: #1f4e79;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    input {
+      padding: 10px;
+      width: 300px;
+    }
+
+    button {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    th {
+      background: #1f4e79;
+      color: white;
+    }
+
+    .loading {
+      color: gray;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h2>Admin Dashboard - Patient Management System</h2>
+</header>
+
+<div class="container">
+
+  <input type="text" id="searchInput" placeholder="Enter User Name or ID">
+  <button onclick="searchUser()">Search</button>
+
+  <div id="result"></div>
+
+</div>
+
+<script>
+async function searchUser() {
+  const query = document.getElementById("searchInput").value;
+  const resultDiv = document.getElementById("result");
+
+  if (!query) {
+    resultDiv.innerHTML = "<p>Please enter a name or ID</p>";
+    return;
+  }
+
+  resultDiv.innerHTML = "<p class='loading'>Loading user data...</p>";
+
+  try {
+    // 🔥 API CALL (replace with your real backend URL)
+    const response = await fetch(`http://localhost:5000/api/users?query=${query}`);
+
+    if (!response.ok) {
+      throw new Error("User not found");
+    }
+
+    const user = await response.json();
+
+    renderUser(user);
+
+  } catch (error) {
+    resultDiv.innerHTML = `<p style="color:red;">${error.message}</p>`;
+  }
+}
+
+function renderUser(user) {
+  let html = `
+    <div class="card">
+      <h3>User Details</h3>
+      <p><b>ID:</b> ${user.id}</p>
+      <p><b>Name:</b> ${user.name}</p>
+      <p><b>Age:</b> ${user.age}</p>
+      <p><b>Blood Group:</b> ${user.bloodGroup}</p>
+    </div>
+
+    <div class="card">
+      <h3>Medical Details</h3>
+      <p><b>Disease:</b> ${user.disease}</p>
+      <p><b>Allergies:</b> ${user.allergies}</p>
+      <p><b>Medications:</b> ${user.medications}</p>
+    </div>
+
+    <div class="card">
+      <h3>Appointments</h3>
+      <table>
+        <tr>
+          <th>Doctor</th>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+  `;
+
+  user.appointments.forEach(app => {
+    html += `
+      <tr>
+        <td>${app.doctor}</td>
+        <td>${app.date}</td>
+        <td>${app.status}</td>
+      </tr>
+    `;
+  });
+
+  html += `</table></div>`;
+
+  document.getElementById("result").innerHTML = html;
+}
+</script>
+
+</body>
+</html>

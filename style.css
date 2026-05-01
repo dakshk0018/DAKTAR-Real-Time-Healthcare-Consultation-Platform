@@ -1,0 +1,384 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff5f8;
+  overflow-x: hidden;
+}
+
+/* Header */
+.top-header {
+  position: relative;
+  background: linear-gradient(135deg, #ff4d88, #ff99b3);
+  padding: 20px;
+  text-align: center;
+  animation: slideDown 0.8s ease;
+}
+
+.logo {
+  font-size: 34px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 4px;
+  animation: glowPink 2s infinite alternate;
+}
+
+/* Login Button */
+.login-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: white;
+  color: #ff4d88;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #ffe6ee;
+  transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: white;
+  animation: fadeUp 1.2s ease;
+}
+
+.hero h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+  color: #ff4d88;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 26px;
+  color: #ff4d88;
+}
+
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #ff4d88;
+  display: block;
+  margin: 8px auto;
+  animation: expand 1s ease;
+}
+
+/* Cards Layout */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 30px;
+  justify-content: center;
+}
+
+/* Doctor Cards */
+.doctor-card {
+  background: white;
+  width: 230px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.4s;
+  box-shadow: 0 5px 15px rgba(255, 77, 136, 0.15);
+  animation: fadeUp 1s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-12px) scale(1.05);
+  background: linear-gradient(135deg, #fff0f5, #ffffff);
+  box-shadow: 0 10px 25px rgba(255, 77, 136, 0.3);
+}
+
+/* Problem Cards */
+.problem-card {
+  background: white;
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.4s;
+  border: 1px solid #ffd6e0;
+  animation: fadeUp 1.2s ease;
+}
+
+.problem-card:hover {
+  background: linear-gradient(135deg, #ff4d88, #ff99b3);
+  color: white;
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(255, 77, 136, 0.3);
+}
+
+/* Article Section */
+.article-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  margin: 40px;
+  padding: 25px;
+  border-radius: 15px;
+  gap: 25px;
+  animation: fadeUp 1.5s ease;
+  box-shadow: 0 5px 15px rgba(255, 77, 136, 0.1);
+}
+
+.article-section img {
+  width: 160px;
+  border-radius: 12px;
+  transition: 0.4s;
+}
+
+.article-section img:hover {
+  transform: scale(1.1);
+}
+
+.article-section a {
+  color: #ff4d88;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.article-section a:hover {
+  letter-spacing: 1px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 18px;
+  background: linear-gradient(135deg, #ff4d88, #ff99b3);
+  color: white;
+  margin-top: 40px;
+  animation: slideUp 1s ease;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes expand {
+  from { width: 0; }
+  to { width: 60px; }
+}
+
+@keyframes glowPink {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff99b3;
+  }
+  to {
+    text-shadow: 0 0 15px #fff, 0 0 25px #ff4d88;
+  }
+}
+
+.auth-container {
+  width: 300px;
+  margin: 100px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(255, 77, 136, 0.2);
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ffd6e0;
+  border-radius: 8px;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 10px;
+  background: #ff4d88;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.auth-container button:hover {
+  background: #ff3377;
+}
+.doctor-card {
+  animation: fadeUp 0.8s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  transition: 0.3s;
+}
+
+.doctor-card ul {
+  padding-left: 18px;
+  text-align: left;
+  color: #555;
+}
+
+.doctor-card h3 {
+  color: #ff4d88;
+}
+
+.doctor-card {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.doctor-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  background: #fff0f5;
+  box-shadow: 0 10px 25px rgba(255, 77, 136, 0.2);
+}
+
+/* Hamburger Icon */
+.hamburger {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Dropdown Menu */
+.menu {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 60px;
+  background: white;
+  width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+  animation: fadeDown 0.3s ease;
+}
+
+.menu p {
+  margin: 0;
+  padding: 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.menu p:hover {
+  background: #fff0f5;
+  color: #ff4d88;
+}
+
+/* Animation */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-container select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ffd6e0;
+  background: white;
+}
+
+.auth-container h3 {
+  color: #ff4d88;
+  margin-top: 15px;
+}
+
+.doctor-card p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.doctor-card h3 {
+  color: #ff4d88;
+}
+
+.doctor-card {
+  line-height: 1.4;
+}
+
+.top-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+/* Move HOME button to right */
+.home {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  background: #ff4d88;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.home:hover {
+  background: #e6005c;
+}
+

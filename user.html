@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Dashboard | DAKTAR</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="top-header">
+
+  <div class="logo">DAKTAR</div>
+
+  <!-- Hamburger -->
+  <div class="hamburger" onclick="toggleMenu()">
+    ☰
+  </div>
+
+  <!-- Dropdown Menu -->
+  <div id="menu" class="menu">
+    <p onclick="openInfo()">👤 User Info</p>
+    <p onclick="checkLogin('bookings.html')">📅 Appointments</p>
+    <p onclick="logout()">🚪 Logout</p>
+  </div>
+</header>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Welcome, <span id="name"></span> 👋</h1>
+    <p>Your health dashboard is ready. Explore doctors and services below.</p>
+  </section>
+
+  <!-- Doctors -->
+<section>
+  <h2 class="section-title">Our Specialists</h2>
+
+  <div class="card-container">
+
+    <div class="doctor-card" onclick="checkLogin('doctor.html')">
+      <h3>Dr. Aisha Khan</h3>
+      <p>General Physician</p>
+      <p>Experience: 10+ Years</p>
+    </div>
+
+    <div class="doctor-card" onclick="checkLogin('doctor.html')">
+      <h3>Dr. Rohan Mehta</h3>
+      <p>Cardiologist</p>
+      <p>Experience: 8+ Years</p>
+    </div>
+
+    <div class="doctor-card" onclick="checkLogin('doctor.html')">
+      <h3>Dr. Neha Sharma</h3>
+      <p>Dermatologist</p>
+      <p>Experience: 6+ Years</p>
+    </div>
+
+    <div class="doctor-card" onclick="checkLogin('doctor.html')">
+      <h3>Dr. Arjun Verma</h3>
+      <p>Orthopedic Specialist</p>
+      <p>Experience: 7+ Years</p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Health Issues -->
+  <section>
+    <h2 class="section-title">Common Health Issues</h2>
+    <div class="card-container">
+
+      <div class="problem-card" onclick="checkLogin('doctor.html')">Fever & Cold</div>
+      <div class="problem-card" onclick="checkLogin('doctor.html')">Skin Allergies</div>
+      <div class="problem-card" onclick="checkLogin('doctor.html')">Blood Pressure</div>
+      <div class="problem-card" onclick="checkLogin('doctor.html')">Stress</div>
+      <div class="problem-card" onclick="checkLogin('doctor.html')">Diabetes</div>
+      <div class="problem-card" onclick="checkLogin('doctor.html')">Headache</div>
+
+    </div>
+  </section>
+
+  <!-- Articles Section -->
+<section class="article-section">
+  <img src="article.jpg" alt="Health Article">
+  
+  <div class="article-content">
+    <h3>Health Awareness & Medical Tips</h3>
+    <p>Stay updated with expert health insights and preventive care articles.</p>
+    <a href="article.html" onclick="checkLogin('articles.html')">Read Full Articles →</a>
+  </div>
+</section>
+
+  <footer>
+    <p>© 2026 DAKTAR | User Dashboard</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

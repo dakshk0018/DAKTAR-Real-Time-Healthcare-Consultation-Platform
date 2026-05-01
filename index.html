@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DAKTAR | Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="top-header">
+    <button class="login-btn" onclick="goToLogin()">Login</button>
+    <div class="logo">DAKTAR</div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Find the Best Doctors for Your Health</h1>
+    <p>Consult with verified doctors online — get expert advice instantly.</p>
+  </section>
+
+  <!-- Doctors -->
+  <section>
+    <h2 class="section-title">Our Specialists</h2>
+    <div class="card-container">
+
+      <div class="doctor-card" onclick="checkLogin('doctor1.html')">
+        <h3>Dr. Aisha Khan</h3>
+        <p>General Physician | 10 yrs exp.</p>
+      </div>
+
+      <div class="doctor-card" onclick="checkLogin('doctor2.html')">
+        <h3>Dr. Rohan Mehta</h3>
+        <p>Cardiologist | 8 yrs exp.</p>
+      </div>
+
+      <div class="doctor-card" onclick="checkLogin('doctor3.html')">
+        <h3>Dr. Neha Sharma</h3>
+        <p>Dermatologist | 6 yrs exp.</p>
+      </div>
+
+      <div class="doctor-card" onclick="checkLogin('doctor4.html')">
+        <h3>Dr. Arjun Verma</h3>
+        <p>Orthopedic | 7 yrs exp.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Health Problems -->
+  <section>
+    <h2 class="section-title">Common Health Issues</h2>
+    <div class="card-container">
+
+      <div class="problem-card" onclick="checkLogin('fever.html')">Fever & Cold</div>
+      <div class="problem-card" onclick="checkLogin('skin.html')">Skin Allergies</div>
+      <div class="problem-card" onclick="checkLogin('bp.html')">Blood Pressure</div>
+      <div class="problem-card" onclick="checkLogin('stress.html')">Stress & Anxiety</div>
+      <div class="problem-card" onclick="checkLogin('diabetes.html')">Diabetes</div>
+      <div class="problem-card" onclick="checkLogin('headache.html')">Headache & Migraine</div>
+
+    </div>
+  </section>
+
+  <!-- Articles -->
+  <section class="article-section">
+    <img src="article.jpg" alt="Article">
+    <div>
+      <h3>Health Awareness & Tips</h3>
+      <a href="articles.html">Read Full Articles →</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 DAKTAR | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

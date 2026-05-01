@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Dashboard | DAKTAR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="top-header">
+  <div class="logo">DAKTAR</div>
+  <button class="home" onclick="goHome()">Home</button>
+</header>
+
+<!-- Welcome -->
+<section class="hero">
+  <h1>Welcome <span id="name"></span> 👋</h1>
+  <p>Your personal healthcare dashboard</p>
+</section>
+
+<!-- MAIN 3 MODULES -->
+<section>
+  <h2 class="section-title">Quick Access</h2>
+
+  <div class="card-container">
+
+    <!-- 1. Doctors -->
+    <div class="doctor-card" onclick="openDoctors()">
+      <h3>🩺 Available Doctors</h3>
+      <p>View specialists and choose your doctor</p>
+    </div>
+
+    <!-- 2. Appointment -->
+    <div class="doctor-card" onclick="checkLogin('appointment.html')">
+      <h3>📅 Book Appointment</h3>
+      <p>Select doctor & schedule consultation</p>
+    </div>
+
+    <!-- 3. Articles -->
+    <div class="doctor-card" onclick="checkLogin('article.html')">
+      <h3>📚 Health Articles</h3>
+      <p>Read health tips & prevention guides</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Info Section -->
+<section class="article-section">
+  <img src="user.png" alt="User">
+
+  <div class="article-content">
+    <h3>Your Health Dashboard</h3>
+    <p>
+      Manage doctors, appointments, and health awareness content all in one place.
+    </p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 DAKTAR | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
